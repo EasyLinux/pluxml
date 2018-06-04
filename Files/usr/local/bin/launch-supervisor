@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ ! -d /var/www/html/data/plugins ]; then
+  # Premier lancement
+  echo "Initialisation de data"
+  echo '  Pour vous connecter admin/Pa$$w0rd'
+  cd /var/www/html/data
+  tar zxf /var/www/data.tgz
+fi
+echo "Launch Supervisord"
+supervisord -c /etc/supervisor/supervisor.conf
