@@ -4,7 +4,7 @@ LABEL Maintainer="Serge NOEL <serge.noel@net6a.com>"
 
 # Install needed packages
 RUN apk update \
-    && apk add nginx php7-fpm php7-gd php7-session php7-simplexml php7-xml zip wget supervisor 
+    && apk add nginx php7-fpm php7-gd php7-session php7-simplexml php7-xml php7-curl zip wget supervisor 
 
 # Prepare for loggin
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
